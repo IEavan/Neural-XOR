@@ -14,7 +14,7 @@ class MLP(torch.nn.Module):
     def forward(self, x):
         x = x.float()
         x = self.linear1(x)
-        s = self.sigmoid(x)
+        x = self.sigmoid(x)
         
         x = self.linear2(x)
         x = self.sigmoid(x)
